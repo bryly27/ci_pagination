@@ -4,7 +4,7 @@
 <?php  
 				for($i=1;$i<=ceil(count($all)/10);$i++)
 				{ ?>
-					<li><a class='page_search' href='' alt='<?= $i ?>'><?= $i ?></a></li>
+					<li id='<?= $i ?>'><a class='page_search' href='' alt='<?= $i ?>'><?= $i ?></a></li>
 <?php		} ?>
 			</ul>
 		</div>

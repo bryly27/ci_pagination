@@ -3,6 +3,7 @@ $(document).ready(function(){
 		$.get(
 			'/pages/get_all/' + 1, function(res){
 				$('#results').html(res);
+				$('#1').addClass("Active");
 		});
 
 		// click on page numbers
@@ -13,11 +14,13 @@ $(document).ready(function(){
 				$.get(
 					'/pages/name_search/'+ name + '/' + page, function(res){
 						$('#results').html(res);
+						$('#'+page).addClass("Active");
 				})
 			}else{
 				$.get(
 					'/pages/get_all/' + page, function(res){
 						$('#results').html(res);
+						$('#'+page).addClass("Active");
 				});
 			}
 			return false;
@@ -31,11 +34,13 @@ $(document).ready(function(){
 				$.get(
 					'/pages/name_search/'+ name + '/' + 1, function(res){
 						$('#results').html(res);
+						$('#1').addClass("Active");
 				})
 			}else{
 				$.get(
 					'/pages/get_all/'+1, function(res){
 						$('#results').html(res);
+						$('#1').addClass("Active");
 				});
 			}
 		})
