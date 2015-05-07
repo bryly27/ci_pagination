@@ -30,7 +30,6 @@ $(document).ready(function(){
 		$(document).on('keyup', '#name_search', function(){
 			var name = $(this).val();
 			if(name !== '' && name !== null){
-				console.log('looking for ', name);
 				$.get(
 					'/pages/name_search/'+ name + '/' + 1, function(res){
 						$('#results').html(res);
